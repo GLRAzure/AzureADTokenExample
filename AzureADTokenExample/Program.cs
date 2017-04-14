@@ -41,6 +41,7 @@ namespace AzureADTokenExample
                 case 's':
                     Console.WriteLine("\nRunning in user mode w/ SQL test, interactive creds\n\n");
                     AuthenticationHelper.SQLTestMode = true;
+                    AuthenticationHelper.InteractiveCredsMode = true;
                     Requests.UserMode().Wait();
                     break;
                 case 'x':
@@ -52,6 +53,7 @@ namespace AzureADTokenExample
                 case 'm':
                     Console.WriteLine("\nRunning in user mode w/ manual creds\n\n");
                     AuthenticationHelper.InteractiveCredsMode = true;
+                    AuthenticationHelper.InteractiveCredsMode = false;
                     Requests.UserMode().Wait();
                     break;
                 default:
